@@ -1,0 +1,466 @@
+/*
+todo  font-family: "Dancing Script", cursive;
+todo  font-optical-sizing: auto;
+todo  font-weight: <weight>;
+todo  font-style: normal;
+todo
+todo  font-family: "Oswald", sans-serif;
+todo  font-optical-sizing: auto;
+todo  font-weight: <weight>;
+todo  font-style: normal;
+todo
+todo  <link rel="stylesheet" href="main.css">
+todo 	<link rel="preconnect" href="https://fonts.googleapis.com">
+todo 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+todo 	<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+todo 	<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+
+*/
+/*
+todo @include media(sm){
+todo   .hello{
+todo     background-color: lightblue;
+todo   }
+todo   
+todo }
+*/
+/*
+todo .smaple_one{
+todo   @include grid(3,3)
+todo }
+todo .smaple_two{
+todo   @include grid(3,3,10px,start,start,start,start,start,start)
+todo }
+*/
+/*
+todo  .sample_one{
+todo  @include column(1,2)
+todo  }
+todo  .sample_two{
+todo  @include row(1,2)
+todo   }
+*/
+/*
+todo .sample{
+todo   @include transition(all,1,5,linear)
+todo }
+*/
+/*
+todo .sample_one {
+todo   @include animation(
+todo     sample_two, //animation-name
+todo     3s, //animation-duration
+todo     2s, //nimation-delay
+todo     infinite, //animation-iteration-count
+todo     alternate, //animation-direction:
+todo     linear, //nimation-timing-function
+todo     forwards, //nimation-fill-mode
+todo     (0px, 10px, 50px, 10px, 10px),//translateX
+todo     (0px, 10px, 50px, 10px, 10px),//translateY
+todo     (0px, 10px, 50px, 10px, 10px, 10px),//translateZ
+todo     (1deg, 5deg, 1deg, 5deg, 1deg),//rotate
+todo     (0.1, 0.5, 0.2, 0.5, 0.3),//scaleX
+todo     (0.1, 0.5, 0.2, 0.5, 0.3),//scaleY
+todo     (0.1, 0.5, 0.2, 0.5, 0.3),//scaleZ
+todo     (1deg, 5deg, 1deg, 5deg, 1deg),//skewX
+todo     (1deg, 5deg, 1deg, 5deg, 1deg) //skewY
+todo 
+todo   );
+todo }
+*/
+body {
+  color: #000000;
+  text-align: center;
+  font-weight: bold;
+  background-color: #DDE6ED;
+}
+
+.header {
+  font-family: "Dancing Script", cursive;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 7vw;
+  color: #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.6);
+}
+
+.repository_container {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.repository_title {
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 1.5vw;
+  color: #3d0000;
+}
+
+.repository {
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 1.5vw;
+  color: #950101;
+}
+
+.header_line {
+  display: flex;
+  flex-direction: column;
+  margin: 40px;
+  justify-content: center;
+  align-items: center;
+}
+
+.header_line_color_1 {
+  background-color: #950101;
+  height: 3px;
+  width: 80%;
+  animation-name: header_line_color_1;
+  animation-duration: 1s;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+@keyframes header_line_color_1 {
+  0% {
+    transform: translateX(0) translateY(0) translateZ(0) perspective(0) scaleX(0.99) scaleX(1) scaleX(1) skewX(0deg) skewY(0deg) rotate(0deg);
+  }
+  25% {
+    transform: translateX(0) translateY(0) translateZ(0) perspective(0) scaleX(1) scaleX(1) scaleX(1) skewX(0deg) skewY(0deg) rotate(0deg);
+  }
+  50% {
+    transform: translateX(0) translateY(0) translateZ(0) perspective(0) scaleX(1.01) scaleX(1) scaleX(1) skewX(0deg) skewY(0deg) rotate(0deg);
+  }
+  75% {
+    transform: translateX(0) translateY(0) translateZ(0) perspective(0) scaleX(1) scaleX(1) scaleX(1) skewX(0deg) skewY(0deg) rotate(0deg);
+  }
+  100% {
+    transform: translateX(0) translateY(0) translateZ(0) perspective(0) scaleX(0.99) scaleX(1) scaleX(1) skewY(0deg) skewX(0deg) rotate(0deg);
+  }
+}
+
+.header_line_color_2 {
+  background-color: #ff0000;
+  height: 3px;
+  width: 70%;
+  animation-name: header_line_color_2;
+  animation-duration: 1s;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+@keyframes header_line_color_2 {
+  0% {
+    transform: translateX(0) translateY(0) translateZ(0) perspective(0) scaleX(1.01) scaleX(1) scaleX(1) skewX(0deg) skewY(0deg) rotate(0deg);
+  }
+  25% {
+    transform: translateX(0) translateY(0) translateZ(0) perspective(0) scaleX(1) scaleX(1) scaleX(1) skewX(0deg) skewY(0deg) rotate(0deg);
+  }
+  50% {
+    transform: translateX(0) translateY(0) translateZ(0) perspective(0) scaleX(0.99) scaleX(1) scaleX(1) skewX(0deg) skewY(0deg) rotate(0deg);
+  }
+  75% {
+    transform: translateX(0) translateY(0) translateZ(0) perspective(0) scaleX(1) scaleX(1) scaleX(1) skewX(0deg) skewY(0deg) rotate(0deg);
+  }
+  100% {
+    transform: translateX(0) translateY(0) translateZ(0) perspective(0) scaleX(1.01) scaleX(1) scaleX(1) skewY(0deg) skewX(0deg) rotate(0deg);
+  }
+}
+
+.header_line_color_3 {
+  background-color: #ff004d;
+  height: 3px;
+  width: 60%;
+  animation-name: header_line_color_3;
+  animation-duration: 1s;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+@keyframes header_line_color_3 {
+  0% {
+    transform: translateX(0) translateY(0) translateZ(0) perspective(0) scaleX(0.99) scaleX(1) scaleX(1) skewX(0deg) skewY(0deg) rotate(0deg);
+  }
+  25% {
+    transform: translateX(0) translateY(0) translateZ(0) perspective(0) scaleX(1) scaleX(1) scaleX(1) skewX(0deg) skewY(0deg) rotate(0deg);
+  }
+  50% {
+    transform: translateX(0) translateY(0) translateZ(0) perspective(0) scaleX(1.01) scaleX(1) scaleX(1) skewX(0deg) skewY(0deg) rotate(0deg);
+  }
+  75% {
+    transform: translateX(0) translateY(0) translateZ(0) perspective(0) scaleX(1) scaleX(1) scaleX(1) skewX(0deg) skewY(0deg) rotate(0deg);
+  }
+  100% {
+    transform: translateX(0) translateY(0) translateZ(0) perspective(0) scaleX(0.99) scaleX(1) scaleX(1) skewY(0deg) skewX(0deg) rotate(0deg);
+  }
+}
+
+.header_line_color_4 {
+  background-color: #faef5d;
+  height: 3px;
+  width: 50%;
+  animation-name: header_line_color_4;
+  animation-duration: 1s;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+@keyframes header_line_color_4 {
+  0% {
+    transform: translateX(0) translateY(0) translateZ(0) perspective(0) scaleX(1.01) scaleX(1) scaleX(1) skewX(0deg) skewY(0deg) rotate(0deg);
+  }
+  25% {
+    transform: translateX(0) translateY(0) translateZ(0) perspective(0) scaleX(1) scaleX(1) scaleX(1) skewX(0deg) skewY(0deg) rotate(0deg);
+  }
+  50% {
+    transform: translateX(0) translateY(0) translateZ(0) perspective(0) scaleX(0.99) scaleX(1) scaleX(1) skewX(0deg) skewY(0deg) rotate(0deg);
+  }
+  75% {
+    transform: translateX(0) translateY(0) translateZ(0) perspective(0) scaleX(1) scaleX(1) scaleX(1) skewX(0deg) skewY(0deg) rotate(0deg);
+  }
+  100% {
+    transform: translateX(0) translateY(0) translateZ(0) perspective(0) scaleX(1.01) scaleX(1) scaleX(1) skewY(0deg) skewX(0deg) rotate(0deg);
+  }
+}
+
+.header_line_color_5 {
+  background-color: #000000;
+  height: 3px;
+  width: 40%;
+  animation-name: header_line_color_5;
+  animation-duration: 1s;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+@keyframes header_line_color_5 {
+  0% {
+    transform: translateX(0) translateY(0) translateZ(0) perspective(0) scaleX(0.99) scaleX(1) scaleX(1) skewX(0deg) skewY(0deg) rotate(0deg);
+  }
+  25% {
+    transform: translateX(0) translateY(0) translateZ(0) perspective(0) scaleX(1) scaleX(1) scaleX(1) skewX(0deg) skewY(0deg) rotate(0deg);
+  }
+  50% {
+    transform: translateX(0) translateY(0) translateZ(0) perspective(0) scaleX(1.01) scaleX(1) scaleX(1) skewX(0deg) skewY(0deg) rotate(0deg);
+  }
+  75% {
+    transform: translateX(0) translateY(0) translateZ(0) perspective(0) scaleX(1) scaleX(1) scaleX(1) skewX(0deg) skewY(0deg) rotate(0deg);
+  }
+  100% {
+    transform: translateX(0) translateY(0) translateZ(0) perspective(0) scaleX(0.99) scaleX(1) scaleX(1) skewY(0deg) skewX(0deg) rotate(0deg);
+  }
+}
+
+/*
+todo fix header
+*/
+#content_section_one {
+  width: 100%;
+  margin: 0 auto;
+  border: 1px solid #cbf1f5;
+  display: grid;
+  grid-gap: 1px;
+  justify-content: stretch;
+  justify-items: stretch;
+  justify-self: stretch;
+  align-content: stretch;
+  align-items: stretch;
+  align-self: stretch;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: auto;
+}
+
+#content_section_one div {
+  background: #a6e3e9;
+  width: 100%;
+  border: 1px solid #cbf1f5;
+}
+
+#content_section_one div:nth-child(even) {
+  background: #71c9ce;
+  width: 100%;
+  border: 1px solid #e3fdfd;
+}
+
+/*
+todo content_section_one
+*/
+#content_section_two {
+  grid-gap: 10px;
+  margin: 0 auto;
+  border: 1px solid #cbf1f5;
+  display: grid;
+  grid-gap: 1px;
+  justify-content: stretch;
+  justify-items: stretch;
+  justify-self: stretch;
+  align-content: stretch;
+  align-items: stretch;
+  align-self: stretch;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(4, minmax(150px, auto));
+}
+
+#content_section_two div {
+  background: #a6e3e9;
+  padding: 30px;
+  border: 1px solid #e3fdfd;
+}
+
+#content_section_two div:nth-child(even) {
+  background: #e3fdfd;
+  padding: 30px;
+  border: 1px solid #e3fdfd;
+}
+
+.one_section_two {
+  grid-column: 1/3;
+}
+
+.two_section_two {
+  grid-column: 3/7;
+}
+
+.three_section_two {
+  grid-column: 1/4;
+  grid-row: 2/4;
+}
+
+.four_section_two {
+  grid-column: 4/7;
+  grid-row: 2/4;
+}
+
+.five_section_two {
+  grid-column: 3/7;
+}
+
+.six_section_two {
+  grid-column: 1/3;
+  grid-row: 4/5;
+}
+
+/*
+todo content_section_two
+*/
+#content_section_three {
+  display: grid;
+  grid-gap: 1px;
+  justify-content: stretch;
+  justify-items: stretch;
+  justify-self: stretch;
+  align-content: stretch;
+  align-items: stretch;
+  align-self: stretch;
+  grid-template-columns: repeat(3, 1fr);
+  border: 1px solid #cbf1f5;
+}
+
+#content_section_three div {
+  background: #a6e3e9;
+  padding: 30px;
+  border: 10px solid #a6e3e9;
+}
+
+#content_section_three div:nth-child(even) {
+  background: #e3fdfd;
+  padding: 30px;
+  border: 10px solid #a6e3e9;
+}
+
+#content_section_three_nested {
+  display: grid;
+  grid-gap: 1px;
+  justify-content: stretch;
+  justify-items: stretch;
+  justify-self: stretch;
+  align-content: stretch;
+  align-items: stretch;
+  align-self: stretch;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  border: 10px solid #e3fdfd;
+  background: #e3fdfd;
+}
+
+#c#content_section_three_nested div {
+  background: #a6e3e9;
+  padding: 30px;
+  border: 10px solid #a6e3e9;
+}
+
+#content_section_three_nested div:nth-child(even) {
+  background: #e3fdfd;
+  padding: 30px;
+  border: 10px solid #a6e3e9;
+}
+
+/*
+todo content_section_three
+*/
+#content_section_four {
+  display: grid;
+  grid-gap: 1px;
+  justify-content: stretch;
+  justify-items: stretch;
+  justify-self: stretch;
+  align-content: stretch;
+  align-items: stretch;
+  align-self: stretch;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: minmax(150px, auto);
+}
+
+#content_section_four div {
+  background: #a6e3e9;
+  padding: 30px;
+}
+
+.one_section_four {
+  grid-column: 1/3;
+  grid-row: 1/5;
+}
+
+.two_section_four {
+  grid-column: 3/7;
+  grid-row: 1/3;
+}
+
+.three_section_four {
+  grid-column: 3/5;
+  grid-row: 3/5;
+}
+
+.four_section_four {
+  grid-column: 5/7;
+  grid-row: 3/7;
+}
+
+.five_section_four {
+  grid-column: 1/5;
+  grid-row: 5/7;
+}
+
+/*
+todo content_section_four
+*//*# sourceMappingURL=main.css.map */
