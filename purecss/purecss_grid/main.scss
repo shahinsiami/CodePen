@@ -4,10 +4,12 @@ body {
   color: $color_five_1;
   text-align: center;
   font-weight: bold;
-  background-color: #DDE6ED;
- 
+  background-color: #dde6ed;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
 }
-.header{
+.header {
   font-family: "Dancing Script", cursive;
   font-optical-sizing: auto;
   font-weight: bold;
@@ -17,28 +19,23 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  text-shadow: 5px 5px 5px rgba(0,0,0,0.6);
-
+  text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.6);
 }
-.repository_container{
+.repository_container {
   margin-top: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
-
-
-
 }
-.repository_title{
+.repository_title {
   font-family: "Oswald", sans-serif;
   font-optical-sizing: auto;
   font-weight: bold;
   font-style: normal;
   font-size: 1.5vw;
   color: $color_five_2;
-
 }
-.repository{
+.repository {
   font-family: "Oswald", sans-serif;
   font-optical-sizing: auto;
   font-weight: bold;
@@ -46,141 +43,209 @@ body {
   font-size: 1.5vw;
   color: $color_five_3;
 }
-.header_line{
+.header_line {
   display: flex;
   flex-direction: column;
   margin: 40px;
   justify-content: center;
   align-items: center;
 }
-.header_line_color_1{
+.header_line_color_1 {
   background-color: $color_five_3;
   height: 3px;
   width: 80%;
   @include animation(
-    header_line_color_1, 
-       1s, 
-       0s, 
-       infinite, 
-       alternate,
-       linear, 
-       forwards, 
-       null,
-       null,
-       null,
-       null,
-       (0.99, 1, 1.01, 1, 0.99),
-       null,
-       null,
-       null,
-       null,
-   
-     );
-
-
+    header_line_color_1,
+    1s,
+    0s,
+    infinite,
+    alternate,
+    linear,
+    forwards,
+    null,
+    null,
+    null,
+    null,
+    (0.99, 1, 1.01, 1, 0.99),
+    null,
+    null,
+    null,
+    null
+  );
 }
-.header_line_color_2{
+.header_line_color_2 {
   background-color: $color_five_4;
   height: 3px;
   width: 70%;
   @include animation(
-    header_line_color_2, 
-       1s, 
-       0s, 
-       infinite, 
-       alternate,
-       linear, 
-       forwards, 
-       null,
-       null,
-       null,
-       null,
-       (1.01, 1, 0.99, 1, 1.01),
-       null,
-       null,
-       null,
-       null,
-   
-     );
+    header_line_color_2,
+    1s,
+    0s,
+    infinite,
+    alternate,
+    linear,
+    forwards,
+    null,
+    null,
+    null,
+    null,
+    (1.01, 1, 0.99, 1, 1.01),
+    null,
+    null,
+    null,
+    null
+  );
 }
-.header_line_color_3{
+.header_line_color_3 {
   background-color: $color_five_5;
   height: 3px;
   width: 60%;
   @include animation(
-    header_line_color_3, 
-       1s, 
-       0s, 
-       infinite, 
-       alternate,
-       linear, 
-       forwards, 
-       null,
-       null,
-       null,
-       null,
-       (0.99, 1, 1.01, 1, 0.99),
-       null,
-       null,
-       null,
-       null,
-   
-     );
+    header_line_color_3,
+    1s,
+    0s,
+    infinite,
+    alternate,
+    linear,
+    forwards,
+    null,
+    null,
+    null,
+    null,
+    (0.99, 1, 1.01, 1, 0.99),
+    null,
+    null,
+    null,
+    null
+  );
 }
-.header_line_color_4{
+.header_line_color_4 {
   background-color: $color_five_6;
   height: 3px;
   width: 50%;
   @include animation(
-    header_line_color_4, 
-       1s, 
-       0s, 
-       infinite, 
-       alternate,
-       linear, 
-       forwards, 
-       null,
-       null,
-       null,
-       null,
-       (1.01, 1, 0.99, 1, 1.01),
-       null,
-       null,
-       null,
-       null,
-   
-     );
+    header_line_color_4,
+    1s,
+    0s,
+    infinite,
+    alternate,
+    linear,
+    forwards,
+    null,
+    null,
+    null,
+    null,
+    (1.01, 1, 0.99, 1, 1.01),
+    null,
+    null,
+    null,
+    null
+  );
 }
-.header_line_color_5{
+.header_line_color_5 {
   background-color: $color_five_1;
   height: 3px;
   width: 40%;
   @include animation(
-    header_line_color_5, 
-       1s, 
-       0s, 
-       infinite, 
-       alternate,
-       linear, 
-       forwards, 
-       null,
-       null,
-       null,
-       null,
-       (0.99, 1, 1.01, 1, 0.99),
-       null,
-       null,
-       null,
-       null,
-   
-     );
+    header_line_color_5,
+    1s,
+    0s,
+    infinite,
+    alternate,
+    linear,
+    forwards,
+    null,
+    null,
+    null,
+    null,
+    (0.99, 1, 1.01, 1, 0.99),
+    null,
+    null,
+    null,
+    null
+  );
 }
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-family: "Dancing Script", cursive;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 2vw;
+  color: $color_five_3;
+
+
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  &:before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 30%;
+    background: $color_five_5;
+    right: 50%;
+    bottom: 0px;
+    z-index: -1;
+    @include transition(all, 0s, 0.5s, linear);
+    @include animation(
+      footer,
+      //animation-name
+      25s,
+      //animation-duration
+      0s,
+      //nimation-delay
+      infinite,
+      //animation-iteration-count
+      alternate,
+      //animation-direction:
+      linear,
+      //nimation-timing-function
+      forwards,
+      //nimation-fill-mode
+      (0px, -100px , 0px, 100px, 0px),
+      //translateX
+      null,
+      //translateY
+      null,
+      //translateZ
+      (0deg, 180deg, 360deg, 180deg, 0deg),
+      //rotate
+      null,
+      //scaleX
+      null,
+      //scaleY
+      null,
+      //scaleZ
+      null,
+      //skewX
+      null //skewY
+    );
+  }
+  &:hover {
+    color: $color_four_2;
+  }
+
+}
+.footer_link{
+  margin-bottom: 10px;
+  color: $color_five_3;
+  text-decoration: none;
+}
+
+
+
+
+
 // !   ---------------------------------------------------------------------------
 /*
-todo fix header
+todo header footer
 */
 // !   ---------------------------------------------------------------------------
-
 
 #content_section_one {
   width: 100%;

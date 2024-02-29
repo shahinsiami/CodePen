@@ -72,7 +72,10 @@ body {
   color: #000000;
   text-align: center;
   font-weight: bold;
-  background-color: #DDE6ED;
+  background-color: #dde6ed;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
 }
 
 .header {
@@ -271,8 +274,72 @@ body {
   }
 }
 
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-family: "Dancing Script", cursive;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 2vw;
+  color: #950101;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+.footer:before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 30%;
+  background: #ff004d;
+  right: 50%;
+  bottom: 0px;
+  z-index: -1;
+  transition-property: all;
+  transition-delay: 0s;
+  transition-duration: 0.5s;
+  transition-timing-function: linear;
+  animation-name: footer;
+  animation-duration: 25s;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+@keyframes footer {
+  0% {
+    transform: translateX(0px) translateY(0) translateZ(0) perspective(0) scaleX(1) scaleX(1) scaleX(1) skewX(0deg) skewY(0deg) rotate(0deg);
+  }
+  25% {
+    transform: translateX(-100px) translateY(0) translateZ(0) perspective(0) scaleX(1) scaleX(1) scaleX(1) skewX(0deg) skewY(0deg) rotate(180deg);
+  }
+  50% {
+    transform: translateX(0px) translateY(0) translateZ(0) perspective(0) scaleX(1) scaleX(1) scaleX(1) skewX(0deg) skewY(0deg) rotate(360deg);
+  }
+  75% {
+    transform: translateX(100px) translateY(0) translateZ(0) perspective(0) scaleX(1) scaleX(1) scaleX(1) skewX(0deg) skewY(0deg) rotate(180deg);
+  }
+  100% {
+    transform: translateX(0px) translateY(0) translateZ(0) perspective(0) scaleX(1) scaleX(1) scaleX(1) skewY(0deg) skewX(0deg) rotate(0deg);
+  }
+}
+.footer:hover {
+  color: #f6f7d7;
+}
+
+.footer_link {
+  margin-bottom: 10px;
+  color: #950101;
+  text-decoration: none;
+}
+
 /*
-todo fix header
+todo header footer
 */
 #content_section_one {
   width: 100%;
