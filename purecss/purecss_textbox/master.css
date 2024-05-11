@@ -63,8 +63,13 @@ todo     (0.1, 0.5, 0.2, 0.5, 0.3),//scaleX
 todo     (0.1, 0.5, 0.2, 0.5, 0.3),//scaleY
 todo     (0.1, 0.5, 0.2, 0.5, 0.3),//scaleZ
 todo     (1deg, 5deg, 1deg, 5deg, 1deg),//skewX
-todo     (1deg, 5deg, 1deg, 5deg, 1deg) //skewY
+todo     (1deg, 5deg, 1deg, 5deg, 1deg), //skewY
+todo     (0%,25%,50%,75%,100%), //width
+todo     (0%,25%,50%,75%,100%) //height
 todo 
 todo   );
 todo }
+*/
+/*
+todo @include box_sizing
 *//*# sourceMappingURL=master.css.map */

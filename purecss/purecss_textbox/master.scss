@@ -20,6 +20,11 @@ $color_five_3: #950101;
 $color_five_4: #ff0000;
 $color_five_5: #ff004d;
 $color_five_6: #faef5d;
+$color_six_1: #15133c;
+$color_six_2: #f72798;
+$color_six_3: #15f5ba;
+$color_six_4: #f1eee9;
+$color_six_5: #f0f3ff;
 // !   ---------------------------------------------------------------------------
 /*
 todo  font-family: "Dancing Script", cursive;
@@ -102,7 +107,7 @@ todo }
   $align-self: stretch
 ) {
   display: grid;
-  grid-gap:$gap;
+  grid-gap: $gap;
   justify-content: $justify-content;
   justify-items: $justify-items;
   justify-self: $justify-self;
@@ -186,7 +191,9 @@ todo }
   $scaleY,
   $scaleZ,
   $skewX,
-  $skewY
+  $skewY,
+  $width,
+  $height
 ) {
   animation-name: $animation-name;
   animation-duration: $animation-duration;
@@ -206,7 +213,9 @@ todo }
     $scaleY,
     $scaleZ,
     $skewX,
-    $skewY
+    $skewY,
+    $width,
+    $height,
   );
 }
 
@@ -220,7 +229,9 @@ todo }
   $scaleY,
   $scaleZ,
   $skewX,
-  $skewY
+  $skewY,
+  $width,
+  $height,
 ) {
   @keyframes #{$animation-name} {
     0% {
@@ -234,6 +245,8 @@ todo }
         skewX(if($skewX != null, nth($skewX, 1), 0deg))
         skewY(if($skewY != null, nth($skewY, 1), 0deg))
         rotate(if($rotate != null, nth($rotate, 1), 0deg));
+        width:(if($width != null, nth($width, 1), 1));
+        height:(if($height != null, nth($height, 1), 1));
     }
     25% {
       transform: translateX(if($translateX != null, nth($translateX, 2), 0))
@@ -246,6 +259,8 @@ todo }
         skewX(if($skewX != null, nth($skewX, 2), 0deg))
         skewY(if($skewY != null, nth($skewY, 2), 0deg))
         rotate(if($rotate != null, nth($rotate, 2), 0deg));
+        width:(if($width != null, nth($width, 2), 1));
+        height:(if($height != null, nth($height, 2), 1));
     }
     50% {
       transform: translateX(if($translateX != null, nth($translateX, 3), 0))
@@ -258,6 +273,8 @@ todo }
         skewX(if($skewX != null, nth($skewX, 3), 0deg))
         skewY(if($skewY != null, nth($skewY, 3), 0deg))
         rotate(if($rotate != null, nth($rotate, 3), 0deg));
+        width:(if($width != null, nth($width, 3), 1));
+        height:(if($height != null, nth($height, 3), 1));
     }
     75% {
       transform: translateX(if($translateX != null, nth($translateX, 4), 0))
@@ -270,6 +287,8 @@ todo }
         skewX(if($skewX != null, nth($skewX, 4), 0deg))
         skewY(if($skewY != null, nth($skewY, 4), 0deg))
         rotate(if($rotate != null, nth($rotate, 4), 0deg));
+        width:(if($width != null, nth($width, 4), 1));
+        height:(if($height != null, nth($height, 4), 1));
     }
     100% {
       transform: translateX(if($translateX != null, nth($translateX, 5), 0))
@@ -282,6 +301,8 @@ todo }
         skewY(if($skewY != null, nth($skewY, 5), 0deg))
         skewX(if($skewX != null, nth($skewX, 5), 0deg))
         rotate(if($rotate != null, nth($rotate, 5), 0deg));
+        width:(if($width != null, nth($width, 5), 1));
+        height:(if($height != null, nth($height, 5), 1));
     }
   }
 }
@@ -305,9 +326,21 @@ todo     (0.1, 0.5, 0.2, 0.5, 0.3),//scaleX
 todo     (0.1, 0.5, 0.2, 0.5, 0.3),//scaleY
 todo     (0.1, 0.5, 0.2, 0.5, 0.3),//scaleZ
 todo     (1deg, 5deg, 1deg, 5deg, 1deg),//skewX
-todo     (1deg, 5deg, 1deg, 5deg, 1deg) //skewY
+todo     (1deg, 5deg, 1deg, 5deg, 1deg), //skewY
+todo     (0%,25%,50%,75%,100%), //width
+todo     (0%,25%,50%,75%,100%) //height
 todo 
 todo   );
 todo }
+*/
+// !   ---------------------------------------------------------------------------
+@mixin box_sizing {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+// !   ---------------------------------------------------------------------------
+/*
+todo @include box_sizing
 */
 // !   ---------------------------------------------------------------------------
