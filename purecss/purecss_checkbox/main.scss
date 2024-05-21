@@ -1,0 +1,1239 @@
+@import "master.scss";
+
+body {
+  color: $color_five_1;
+  text-align: center;
+  font-weight: bold;
+  background-color: #dde6ed;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+}
+.header {
+  font-family: "Dancing Script", cursive;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 7vw;
+  color: $color_five_1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.6);
+}
+.repository_container {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.repository_title {
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 1.5vw;
+  color: $color_five_2;
+}
+.repository {
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 1.5vw;
+  color: $color_five_3;
+}
+.header_line {
+  display: flex;
+  flex-direction: column;
+  margin: 40px;
+  justify-content: center;
+  align-items: center;
+}
+.header_line_color_1 {
+  background-color: $color_five_3;
+  height: 3px;
+  width: 80%;
+  @include animation(
+    header_line_color_1,
+    1s,
+    0s,
+    infinite,
+    alternate,
+    linear,
+    forwards,
+    null,
+    null,
+    null,
+    null,
+    (0.99, 1, 1.01, 1, 0.99),
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+  );
+}
+.header_line_color_2 {
+  background-color: $color_five_4;
+  height: 3px;
+  width: 70%;
+  @include animation(
+    header_line_color_2,
+    1s,
+    0s,
+    infinite,
+    alternate,
+    linear,
+    forwards,
+    null,
+    null,
+    null,
+    null,
+    (1.01, 1, 0.99, 1, 1.01),
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+  );
+}
+.header_line_color_3 {
+  background-color: $color_five_5;
+  height: 3px;
+  width: 60%;
+  @include animation(
+    header_line_color_3,
+    1s,
+    0s,
+    infinite,
+    alternate,
+    linear,
+    forwards,
+    null,
+    null,
+    null,
+    null,
+    (0.99, 1, 1.01, 1, 0.99),
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+  );
+}
+.header_line_color_4 {
+  background-color: $color_five_6;
+  height: 3px;
+  width: 50%;
+  @include animation(
+    header_line_color_4,
+    1s,
+    0s,
+    infinite,
+    alternate,
+    linear,
+    forwards,
+    null,
+    null,
+    null,
+    null,
+    (1.01, 1, 0.99, 1, 1.01),
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+  );
+}
+.header_line_color_5 {
+  background-color: $color_five_1;
+  height: 3px;
+  width: 40%;
+  @include animation(
+    header_line_color_5,
+    1s,
+    0s,
+    infinite,
+    alternate,
+    linear,
+    forwards,
+    null,
+    null,
+    null,
+    null,
+    (0.99, 1, 1.01, 1, 0.99),
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+  );
+}
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-family: "Dancing Script", cursive;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 2vw;
+  color: $color_five_3;
+
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  &:before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 30%;
+    background: $color_five_5;
+    right: 50%;
+    bottom: 0px;
+    z-index: -1;
+    @include transition(all, 0s, 0.5s, linear);
+    @include animation(
+      footer,
+      25s,
+      0s,
+      infinite,
+      alternate,
+      linear,
+      forwards,
+      (0px, -100px, 0px, 100px, 0px),
+      null,
+      null,
+      null,
+      null,
+      (0deg, 180deg, 360deg, 180deg, 0deg),
+      null,
+      null,
+      null,
+      null,
+      null,
+    );
+  }
+  &:hover {
+    color: $color_four_2;
+  }
+}
+.footer_link {
+  margin-bottom: 10px;
+  color: $color_five_3;
+  text-decoration: none;
+}
+
+// !   ---------------------------------------------------------------------------
+/*
+todo header footer
+*/
+// !   ---------------------------------------------------------------------------
+// !   ---------------------------------------------------------------------------
+/*
+todo hover effect
+*/
+// !   ---------------------------------------------------------------------------
+.container {
+  width: 100vw;
+  @include media(oxs) {
+    @include grid(repeat(1, 1fr), auto, 2px);
+    row-gap: 30px;
+  }
+  @include media(omd) {
+    @include grid(repeat(2, 1fr), auto, 2px);
+    row-gap: 30px;
+  }
+
+}
+
+// !   ---------------------------------------------------------------------------
+/*
+todo checkbox_1
+*/
+// !   ---------------------------------------------------------------------------
+/*
+todo mixin  checkbox_1 start
+*/
+// !   ---------------------------------------------------------------------------
+
+
+@mixin checkbox_1(
+  $width,
+  $height,
+  $font_size,
+  $font_family,
+  $color_1,
+  $color_2,
+  $color_3,
+  $color_4,
+  $color_5
+) {
+
+
+.checkbox_1{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  .checkbox_1_text{
+    margin-left:10px;
+    margin-right:10px;
+    color:$color_1;
+    font-size: $font_size;
+    font-family: $font_family;
+    }
+    input{
+      position: absolute;
+      opacity: 0;
+    }
+    .checkbox_1_shape{
+      position: relative;
+      width: $width;
+      height:   $height;
+      border: 2px solid $color_3;
+      border-radius: 5px;
+      background-color: $color_4;
+      @include animation(
+        checkbox_1_shape_uncheck,
+         1s,
+         0s,
+         1, 
+         alternate,
+         linear,
+         forwards,
+         null,
+         null,
+         null,
+         null,
+         (1, 1.1, 1, 1.2, 1),
+         (1, 1.1, 1, 1.2, 1),
+         null,
+         null,
+         null,
+         null, 
+         null 
+       );
+      &:before {
+        content: ' ';
+        position: absolute;
+        top:10%;
+        left: 10%;
+        width: 70%;
+        height: 35%;
+        border-bottom: 4px solid $color_2;
+        border-left: 4px solid $color_2;
+        border-radius: 5px;
+        transform: rotate(-45deg);
+        display: none;
+      }
+    }
+    input:checked ~ .checkbox_1_shape {
+      @include animation(
+        checkbox_1_shape_check,
+         1s,
+         0s, 
+         1, 
+         alternate,
+         linear, 
+         forwards,
+         null,
+         null,
+         null,
+         null,
+         (1, 1.1, 1, 1.2, 1),
+         (1, 1.1, 1, 1.2, 1),
+         null,
+         null,
+         null, 
+         null, 
+         null 
+     
+       );
+        &:before{
+        display: block;
+      }
+    }
+  }
+}
+
+// !   ---------------------------------------------------------------------------
+/*
+todo mixin  checkbox_1 end
+*/
+// !   ---------------------------------------------------------------------------
+
+
+@include checkbox_1(
+    30px,
+    30px,
+    20px,
+    Oswald,
+    $color_six_1,
+    $color_six_2,
+    $color_six_3,
+    $color_six_4,
+    $color_six_5,
+  );
+
+// !   ---------------------------------------------------------------------------
+/*
+todo  checkbox_1
+*/
+// !   ---------------------------------------------------------------------------
+
+
+
+
+// !   ---------------------------------------------------------------------------
+/*
+todo checkbox_2
+*/
+// !   ---------------------------------------------------------------------------
+/*
+todo mixin  checkbox_2 start
+*/
+// !   ---------------------------------------------------------------------------
+
+
+@mixin checkbox_2(
+  $width,
+  $height,
+  $font_size,
+  $font_family,
+  $color_1,
+  $color_2,
+  $color_3,
+  $color_4,
+  $color_5
+) {
+
+
+.checkbox_2{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  .checkbox_2_text{
+    margin-left:10px;
+    margin-right:10px;
+    color:$color_1;
+    font-size: $font_size;
+    font-family: $font_family;
+    }
+    input{
+      position: absolute;
+      opacity: 0;
+    }
+    .checkbox_2_shape{
+      position: relative;
+      width: $width;
+      height:   $height;
+      border: 2px solid $color_3;
+      border-radius: 5px;
+      background-color: $color_4;
+      @include animation(
+        checkbox_2_shape_uncheck,
+         1s,
+         0s,
+         1, 
+         alternate,
+         linear,
+         forwards,
+         null,
+         null,
+         null,
+         null,
+         (1, 1.1, 1, 1.2, 1),
+         (1, 1.1, 1, 1.2, 1),
+         null,
+         null,
+         null,
+         null, 
+         null 
+       );
+      &:before {
+        content: ' ';
+        position: absolute;
+        top:0;
+        left: 0;
+        width: 0%;
+        height: 0%;
+        background-color: $color_3;
+        border-radius: 5px;
+        display: block;
+      }
+    }
+    input:checked ~ .checkbox_2_shape::before {
+      @include animation(
+        checkbox_2_shape_check,
+         1s,
+         0s, 
+         1, 
+         alternate,
+         linear, 
+         forwards,
+         null,
+         null,
+         null,
+         null,
+         null,
+         null,
+         null,
+         null,
+         null, 
+         (0%,85%,55%,85%,100%), 
+         (100%,100%,100%,100%,100%) 
+     
+       );
+        &:before{
+        display: block;
+      }
+    }
+  }
+}
+
+// !   ---------------------------------------------------------------------------
+/*
+todo mixin  checkbox_2 end
+*/
+// !   ---------------------------------------------------------------------------
+
+
+@include checkbox_2(
+    30px,
+    30px,
+    20px,
+    Oswald,
+    $color_six_1,
+    $color_six_2,
+    $color_six_3,
+    $color_six_4,
+    $color_six_5,
+  );
+
+// !   ---------------------------------------------------------------------------
+/*
+todo  checkbox_2
+*/
+// !   ---------------------------------------------------------------------------
+
+
+// !   ---------------------------------------------------------------------------
+/*
+todo checkbox_3
+*/
+// !   ---------------------------------------------------------------------------
+/*
+todo mixin  checkbox_3 start
+*/
+// !   ---------------------------------------------------------------------------
+
+
+@mixin checkbox_3(
+  $width,
+  $height,
+  $radius,
+  $font_size,
+  $font_family,
+  $width_object,
+  $height_object,
+  $color_1,
+  $color_2,
+  $color_3,
+  $color_4,
+  $color_5
+) {
+
+.checkbox_3{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .checkbox_3_radio{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: $color_3;
+    color: $color_1;
+    width: $width;
+    height: $height;
+    border-radius: $radius;
+    }
+    label {
+      font-family: $font_family;
+      font-size:  $font_size;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: $color_4;
+      width: $width_object;
+      height: $height_object;
+      text-align: center;
+      border-radius: $radius;
+      overflow: hidden;
+      transition: linear 0.5s;
+      color: $color_1;
+    }
+    input{
+      appearance: none;
+      display: none;
+    }
+  
+    input:checked + label {
+      background-color: $color_2;
+      color: $color_4;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+  }
+}
+
+// !   ---------------------------------------------------------------------------
+/*
+todo mixin  checkbox_3 end
+*/
+// !   ---------------------------------------------------------------------------
+
+
+@include checkbox_3(
+    300px,
+    50px,
+    50px,
+    20px,
+    Oswald,
+    30%,
+    40px,
+    $color_six_1,
+    $color_six_2,
+    $color_six_3,
+    $color_six_4,
+    $color_six_5,
+  );
+
+// !   ---------------------------------------------------------------------------
+/*
+todo  checkbox_3
+*/
+// !   ---------------------------------------------------------------------------
+
+
+
+// !   ---------------------------------------------------------------------------
+/*
+todo checkbox_4
+*/
+// !   ---------------------------------------------------------------------------
+/*
+todo mixin  checkbox_4 start
+*/
+// !   ---------------------------------------------------------------------------
+
+
+@mixin checkbox_4(
+  $width,
+  $height,
+  $radius,
+  $font_size,
+  $font_family,
+  $width_object,
+  $height_object,
+  $color_1,
+  $color_2,
+  $color_3,
+  $color_4,
+  $color_5
+) {
+
+.checkbox_4{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .checkbox_4_radio{
+    flex-direction: column;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: $color_3;
+    color: $color_1;
+    width: $width;
+    height: $height;
+    border-radius: $radius;
+    }
+    label {
+      font-family: $font_family;
+      font-size:  $font_size;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: $color_4;
+      width: $width_object;
+      height: $height_object;
+      text-align: center;
+      border-radius: $radius;
+      overflow: hidden;
+      transition: linear 0.5s;
+      color: $color_1;
+    }
+    input{
+      appearance: none;
+      display: none;
+    }
+    input:checked + label {
+      background-color: $color_2;
+      color: $color_4;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+  }
+}
+
+// !   ---------------------------------------------------------------------------
+/*
+todo mixin  checkbox_4 end
+*/
+// !   ---------------------------------------------------------------------------
+
+@include checkbox_4(
+    300px,
+    200px,
+    1px,
+    20px,
+    Oswald,
+    90%,
+    20%,
+    $color_six_1,
+    $color_six_2,
+    $color_six_3,
+    $color_six_4,
+    $color_six_5,
+  );
+
+// !   ---------------------------------------------------------------------------
+/*
+todo  checkbox_4
+*/
+// !   ---------------------------------------------------------------------------
+
+
+
+// !   ---------------------------------------------------------------------------
+/*
+todo checkbox_5
+*/
+// !   ---------------------------------------------------------------------------
+/*
+todo mixin  checkbox_5 start
+*/
+// !   ---------------------------------------------------------------------------
+
+
+@mixin checkbox_5(
+  $width,
+  $height,
+  $radius,
+  $font_size,
+  $font_family,
+  $width_object,
+  $height_object,
+  $color_1,
+  $color_2,
+  $color_3,
+  $color_4,
+  $color_5
+) {
+
+.checkbox_5{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .checkbox_5_radio{
+    flex-direction: column;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: $color_3;
+    color: $color_1;
+    width: $width;
+    height: $height;
+    border-radius: $radius;
+    }
+    .checkbox_5_radio_container{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+    }
+    .checkbox_5_text{
+      font-family: $font_family;
+      font-size:  $font_size;
+      color: $color_1;
+      width: 50%;
+    }
+    label {
+      position: relative;
+      width: $width_object;
+      height:   $height_object;
+      border: 2px solid $color_3;
+      border-radius: 100px;
+      background-color: $color_4;
+        @include animation(
+          checkbox_5_shape_uncheck,
+          1s,
+          0s,
+          1, 
+          alternate,
+          linear,
+          forwards,
+          null,
+          null,
+          null,
+          null,
+          (1, 1.1, 1, 1.2, 1),
+          (1, 1.1, 1, 1.2, 1),
+          null,
+          null,
+          null,
+          null, 
+          null 
+         );
+        
+        &:before{
+          content: ' ';
+          position: absolute;
+          top:10%;
+          left: 10%;
+          width: 70%;
+          height: 35%;
+          border-bottom: 4px solid $color_2;
+          border-left: 4px solid $color_2;
+          border-radius: 5px;
+          transform: rotate(-45deg);
+          display: none;
+        }
+
+    }
+    input{
+      appearance: none;
+      display: none;
+    }
+  
+    input:checked ~ label {
+      @include animation(
+        checkbox_1_shape_check,
+        1s,
+        0s, 
+        1, 
+        alternate,
+        linear, 
+        forwards,
+        null,
+        null,
+        null,
+        null,
+        (1, 1.1, 1, 1.2, 1),
+        (1, 1.1, 1, 1.2, 1),
+        null,
+        null,
+        null, 
+        null, 
+        null 
+     
+       );
+        &:before{
+        display: block;
+      }
+    }
+
+
+  }
+}
+
+// !   ---------------------------------------------------------------------------
+/*
+todo mixin  checkbox_5 end
+*/
+// !   ---------------------------------------------------------------------------
+
+@include checkbox_5(
+    300px,
+    200px,
+    1px,
+    20px,
+    Oswald,
+    50px,
+    50px,
+    $color_six_1,
+    $color_six_2,
+    $color_six_3,
+    $color_six_4,
+    $color_six_5,
+  );
+
+// !   ---------------------------------------------------------------------------
+/*
+todo  checkbox_5
+*/
+// !   ---------------------------------------------------------------------------
+
+
+
+
+
+// !   ---------------------------------------------------------------------------
+/*
+todo checkbox_6
+*/
+// !   ---------------------------------------------------------------------------
+/*
+todo mixin  checkbox_6 start
+*/
+// !   ---------------------------------------------------------------------------
+
+
+
+@mixin checkbox_6(
+  $width,
+  $height,
+  $padding,
+  $radius,
+  $font_size,
+  $font_family,
+  $width_object,
+  $height_object,
+  $color_1,
+  $color_2,
+  $color_3,
+  $color_4,
+  $color_5
+) {
+
+.checkbox_6{
+  .select_box_hoder{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  .select_box {
+    display:flex;
+    flex-direction: column;
+    position:relative;
+    width:$width;
+    height:$height;
+    &:focus .option {
+      position:relative;
+      pointer-events:all;
+    }
+  }
+  .option {
+    position:absolute;
+    padding:$padding;
+    min-height:$height_object;
+    display:flex;
+    align-items:center;
+    background:$color_4;
+    border-top:$color_1 solid 1px;
+    top:0;
+    width: 100%;
+    pointer-events:none;
+    order:2;
+    z-index:1;
+    transition:background .4s ease-in-out;
+    box-sizing:border-box;
+    overflow:hidden;
+    white-space:nowrap;
+    &:hover {
+      background:$color_3;
+    }
+  }
+  input {
+    opacity:0;
+    position:absolute;
+  }
+  
+  input:checked + label {
+    order: 1;
+    z-index:2;
+    background:$color_3;
+    border-top:none;
+    position:relative;
+  }
+  input:checked + label:after {
+    content:'';
+    width: 0; 
+    height: 0; 
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid $color_2;
+    position:absolute;
+    right:calc(10% - 10px);
+    top:calc(50% - 5px);
+    pointer-events:none;
+    z-index:3;
+    @include animation(
+      checkbox_6,
+      0.3s,
+      0s, 
+      1, 
+      alternate,
+      linear, 
+      forwards,
+      null,
+      null,
+      null,
+      (0deg, 90deg, 180deg, 270deg, 360deg),
+      null,
+      null,
+      null,
+      null,
+      null, 
+      null, 
+      null 
+   
+     );
+  }
+  input:checked + label:before {
+    position:absolute;
+    right:2%;
+    height: 80%;
+    width: 16%;
+    content: '';
+    background:$color_1;
+  }
+  }
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// !   ---------------------------------------------------------------------------
+/*
+todo mixin  checkbox_6 end
+*/
+// !   ---------------------------------------------------------------------------
+
+@include checkbox_6(
+    300px,
+    200px,
+    0 30px 0 10px,
+    1px,
+    20px,
+    Oswald,
+    50px,
+    50px,
+    $color_six_1,
+    $color_six_2,
+    $color_six_3,
+    $color_six_4,
+    $color_six_5,
+  );
+
+// !   ---------------------------------------------------------------------------
+/*
+todo  checkbox_6
+*/
+// !   ---------------------------------------------------------------------------
+
+
+
+
+
+// !   ---------------------------------------------------------------------------
+/*
+todo checkbox_7
+*/
+// !   ---------------------------------------------------------------------------
+/*
+todo mixin  checkbox_7 start
+*/
+// !   ---------------------------------------------------------------------------
+
+
+@mixin checkbox_7(
+  $width,
+  $height,
+  $radius,
+  $font_size,
+  $font_family,
+  $width_object,
+  $height_object,
+  $color_1,
+  $color_2,
+  $color_3,
+  $color_4,
+  $color_5
+) {
+
+.checkbox_7{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .checkbox_5_radio{
+    flex-direction: column;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: $color_3;
+    color: $color_1;
+    width: $width;
+    height: $height;
+    border-radius: $radius;
+    }
+    .checkbox_5_radio_container{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+    }
+    .checkbox_5_text{
+      font-family: $font_family;
+      font-size:  $font_size;
+      color: $color_1;
+      width: 50%;
+    }
+    label {
+      position: relative;
+      width: $width_object;
+      height:   $height_object;
+      border: 2px solid $color_3;
+      border-radius: 100px;
+      background-color: $color_4;
+        @include animation(
+          checkbox_5_shape_uncheck,
+          1s,
+          0s,
+          1, 
+          alternate,
+          linear,
+          forwards,
+          null,
+          null,
+          null,
+          null,
+          (1, 1.1, 1, 1.2, 1),
+          (1, 1.1, 1, 1.2, 1),
+          null,
+          null,
+          null,
+          null, 
+          null 
+         );
+        
+        &:before{
+          content: ' ';
+          position: absolute;
+          top:10%;
+          left: 10%;
+          width: 70%;
+          height: 35%;
+          border-bottom: 4px solid $color_2;
+          border-left: 4px solid $color_2;
+          border-radius: 5px;
+          transform: rotate(-45deg);
+          display: none;
+        }
+
+    }
+    input{
+      appearance: none;
+      display: none;
+    }
+  
+    input:checked ~ label {
+      @include animation(
+        checkbox_1_shape_check,
+        1s,
+        0s, 
+        1, 
+        alternate,
+        linear, 
+        forwards,
+        null,
+        null,
+        null,
+        null,
+        (1, 1.1, 1, 1.2, 1),
+        (1, 1.1, 1, 1.2, 1),
+        null,
+        null,
+        null, 
+        null, 
+        null 
+     
+       );
+        &:before{
+        display: block;
+      }
+    }
+
+
+  }
+}
+
+// !   ---------------------------------------------------------------------------
+/*
+todo mixin  checkbox_7 end
+*/
+// !   ---------------------------------------------------------------------------
+
+@include checkbox_7(
+    300px,
+    200px,
+    1px,
+    20px,
+    Oswald,
+    50px,
+    50px,
+    $color_six_1,
+    $color_six_2,
+    $color_six_3,
+    $color_six_4,
+    $color_six_5,
+  );
+
+// !   ---------------------------------------------------------------------------
+/*
+todo  checkbox_7
+*/
+// !   ---------------------------------------------------------------------------
