@@ -1,0 +1,466 @@
+@import "master.scss";
+
+body {
+  color: $color_five_1;
+  text-align: center;
+  font-weight: bold;
+  background-color: #dde6ed;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+}
+.header {
+  font-family: "Dancing Script", cursive;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 7vw;
+  color: $color_five_1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.6);
+}
+.repository_container {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.repository_title {
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 1.5vw;
+  color: $color_five_2;
+}
+.repository {
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 1.5vw;
+  color: $color_five_3;
+}
+.header_line {
+  display: flex;
+  flex-direction: column;
+  margin: 40px;
+  justify-content: center;
+  align-items: center;
+}
+.header_line_color_1 {
+  background-color: $color_five_3;
+  height: 3px;
+  width: 80%;
+  @include animation(
+    header_line_color_1,
+    1s,
+    0s,
+    infinite,
+    alternate,
+    linear,
+    forwards,
+    null,
+    null,
+    null,
+    null,
+    (0.99, 1, 1.01, 1, 0.99),
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+  );
+}
+.header_line_color_2 {
+  background-color: $color_five_4;
+  height: 3px;
+  width: 70%;
+  @include animation(
+    header_line_color_2,
+    1s,
+    0s,
+    infinite,
+    alternate,
+    linear,
+    forwards,
+    null,
+    null,
+    null,
+    null,
+    (1.01, 1, 0.99, 1, 1.01),
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+  );
+}
+.header_line_color_3 {
+  background-color: $color_five_5;
+  height: 3px;
+  width: 60%;
+  @include animation(
+    header_line_color_3,
+    1s,
+    0s,
+    infinite,
+    alternate,
+    linear,
+    forwards,
+    null,
+    null,
+    null,
+    null,
+    (0.99, 1, 1.01, 1, 0.99),
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+  );
+}
+.header_line_color_4 {
+  background-color: $color_five_6;
+  height: 3px;
+  width: 50%;
+  @include animation(
+    header_line_color_4,
+    1s,
+    0s,
+    infinite,
+    alternate,
+    linear,
+    forwards,
+    null,
+    null,
+    null,
+    null,
+    (1.01, 1, 0.99, 1, 1.01),
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+  );
+}
+.header_line_color_5 {
+  background-color: $color_five_1;
+  height: 3px;
+  width: 40%;
+  @include animation(
+    header_line_color_5,
+    1s,
+    0s,
+    infinite,
+    alternate,
+    linear,
+    forwards,
+    null,
+    null,
+    null,
+    null,
+    (0.99, 1, 1.01, 1, 0.99),
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+  );
+}
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-family: "Dancing Script", cursive;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 2vw;
+  color: $color_five_3;
+
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  &:before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 30%;
+    background: $color_five_5;
+    right: 50%;
+    bottom: 0px;
+    z-index: -1;
+    @include transition(all, 0s, 0.5s, linear);
+    @include animation(
+      footer,
+      25s,
+      0s,
+      infinite,
+      alternate,
+      linear,
+      forwards,
+      (0px, -100px, 0px, 100px, 0px),
+      null,
+      null,
+      null,
+      null,
+      (0deg, 180deg, 360deg, 180deg, 0deg),
+      null,
+      null,
+      null,
+      null,
+      null,
+    );
+  }
+  &:hover {
+    color: $color_four_2;
+  }
+}
+.footer_link {
+  margin-bottom: 10px;
+  color: $color_five_3;
+  text-decoration: none;
+}
+
+// !   ---------------------------------------------------------------------------
+/*
+todo header footer
+*/
+// !   ---------------------------------------------------------------------------
+// !   ---------------------------------------------------------------------------
+/*
+todo hover effect
+*/
+// !   ---------------------------------------------------------------------------
+.container {
+  width: 100vw;
+  @include media(oxs) {
+    @include grid(repeat(1, 1fr), auto, 2px);
+    row-gap: 30px;
+  }
+  @include media(omd) {
+    @include grid(repeat(2, 1fr), auto, 2px);
+    row-gap: 30px;
+  }
+
+}
+
+// !   ---------------------------------------------------------------------------
+/*
+todo neon_1
+*/
+// !   ---------------------------------------------------------------------------
+
+
+.neon_1_container{
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .neon_1{
+  background-color: $color_six_1;
+  width: 90%;
+  height: 90%;
+
+  .neonText {
+    font-family: "Dancing Script", cursive;
+    font-size: 6.2rem;
+    color: #fff;
+    text-shadow:
+      0 0 7px #fff,
+      0 0 10px #fff,
+      0 0 21px #fff,
+      0 0 42px #f09,
+      0 0 82px #f09,
+      0 0 92px #f09,
+      0 0 102px #f09,
+      0 0 151px #f09;
+  }
+  
+}
+}
+ 
+
+
+// !   ---------------------------------------------------------------------------
+/*
+todo neon_1
+*/
+// !   ---------------------------------------------------------------------------
+
+// !   ---------------------------------------------------------------------------
+/*
+todo neon_2
+*/
+// !   ---------------------------------------------------------------------------
+
+
+.neon_2_container{
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .neon_2{
+  background-color: $color_six_1;
+  width: 90%;
+  height: 90%;
+
+  .neonText {
+    font-family: "Dancing Script", cursive;
+    font-size: 6.2rem;
+    color: #fff;
+    text-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px #5271ff,
+    0 0 82px #5271ff,
+    0 0 92px #5271ff,
+    0 0 102px #5271ff,
+    0 0 151px #5271ff;
+  }
+  
+}
+}
+ 
+
+
+// !   ---------------------------------------------------------------------------
+/*
+todo neon_2
+*/
+// !   ---------------------------------------------------------------------------
+
+
+// !   ---------------------------------------------------------------------------
+/*
+todo neon_3
+*/
+// !   ---------------------------------------------------------------------------
+
+
+.neon_3_container{
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .neon_3{
+  background-color: $color_six_1;
+  width: 90%;
+  height: 90%;
+
+  .neonText {
+    font-family: "Dancing Script", cursive;
+    font-size: 6.2rem;
+    color: #fff;
+    text-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px #0fa,
+    0 0 82px #0fa,
+    0 0 92px #0fa,
+    0 0 102px #0fa,
+    0 0 151px #0fa;
+  }
+  
+}
+}
+
+// !   ---------------------------------------------------------------------------
+/*
+todo neon_3
+*/
+// !   ---------------------------------------------------------------------------
+
+
+
+// !   ---------------------------------------------------------------------------
+/*
+todo neon_4
+*/
+// !   ---------------------------------------------------------------------------
+
+
+.neon_4_container{
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .neon_4{
+  background-color: $color_six_1;
+  width: 90%;
+  height: 90%;
+
+  .neoline_one {
+    border: 0.2rem solid #fff;
+    border-radius: 2rem;
+    box-shadow: 
+              0 0 .2rem #fff,
+              0 0 .2rem #fff,
+              0 0 2rem #bc13fe,
+              0 0 0.8rem #bc13fe,
+              0 0 2.8rem #bc13fe,
+              inset 0 0 1.3rem #bc13fe; 
+  } 
+  .neoline_two {
+    border: 0.2rem solid #fff;
+    border-radius: 2rem;
+    box-shadow: 
+              0 0 .2rem #fff,
+              0 0 .2rem #fff,
+              0 0 2rem #0fa,
+              0 0 0.8rem #0fa,
+              0 0 2.8rem #0fa,
+              inset 0 0 1.3rem #0fa;
+  } 
+  .neoline_three {
+    border: 0.2rem solid #fff;
+    border-radius: 2rem;
+    box-shadow: 
+              0 0 .2rem #fff,
+              0 0 .2rem #fff,
+              0 0 2rem #5271ff,
+              0 0 0.8rem #5271ff,
+              0 0 2.8rem #5271ff,
+              inset 0 0 1.3rem #5271ff;
+  } 
+    .neoline_four {
+    border: 0.2rem solid #fff;
+    border-radius: 2rem;
+    box-shadow: 
+              0 0 .2rem #fff,
+              0 0 .2rem #fff,
+              0 0 2rem #fe1327,
+              0 0 0.8rem #fe1327,
+              0 0 2.8rem #fe1327,
+              inset 0 0 1.3rem #fe1327,
+  } 
+  }
+  
+}
+
+
+// !   ---------------------------------------------------------------------------
+/*
+todo neon_4
+*/
+// !   ---------------------------------------------------------------------------
