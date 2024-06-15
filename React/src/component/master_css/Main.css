@@ -1,0 +1,408 @@
+/*
+todo  font-family: "Dancing Script", cursive;
+todo  font-optical-sizing: auto;
+todo  font-weight: <weight>;
+todo  font-style: normal;
+todo
+todo  font-family: "Oswald", sans-serif;
+todo  font-optical-sizing: auto;
+todo  font-weight: <weight>;
+todo  font-style: normal;
+todo
+todo  <link rel="stylesheet" href="main.css">
+todo 	<link rel="preconnect" href="https://fonts.googleapis.com">
+todo 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+todo 	<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+todo 	<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+
+*/
+/*
+todo @include media(sm){
+todo   .hello{
+todo     background-color: lightblue;
+todo   }
+todo   
+todo }
+*/
+/*
+todo .smaple_one{
+todo   @include grid(3,3)
+todo }
+todo .smaple_two{
+todo   @include grid(3,3,10px,start,start,start,start,start,start)
+todo }
+*/
+/*
+todo  .sample_one{
+todo  @include column(1,2)
+todo  }
+todo  .sample_two{
+todo  @include row(1,2)
+todo   }
+*/
+/*
+todo .sample{
+todo   @include transition(all,1,5,linear)
+todo }
+*/
+/*
+todo .sample_one {
+todo   @include animation(
+todo     sample_two, //animation-name
+todo     3s, //animation-duration
+todo     2s, //nimation-delay
+todo     infinite, //animation-iteration-count
+todo     alternate, //animation-direction:
+todo     linear, //nimation-timing-function
+todo     forwards, //nimation-fill-mode
+todo     (0px, 10px, 50px, 10px, 10px),//translateX
+todo     (0px, 10px, 50px, 10px, 10px),//translateY
+todo     (0px, 10px, 50px, 10px, 10px, 10px),//translateZ
+todo     (1deg, 5deg, 1deg, 5deg, 1deg),//rotate
+todo     (0.1, 0.5, 0.2, 0.5, 0.3),//scaleX
+todo     (0.1, 0.5, 0.2, 0.5, 0.3),//scaleY
+todo     (0.1, 0.5, 0.2, 0.5, 0.3),//scaleZ
+todo     (1deg, 5deg, 1deg, 5deg, 1deg),//skewX
+todo     (1deg, 5deg, 1deg, 5deg, 1deg), //skewY
+todo     (0%,25%,50%,75%,100%), //width
+todo     (0%,25%,50%,75%,100%) //height
+todo 
+todo   );
+todo }
+*/
+/*
+todo @include box_sizing
+*/
+body {
+  color: #000000;
+  text-align: center;
+  font-weight: bold;
+  background-color: #dde6ed;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+}
+
+.header {
+  font-family: "Dancing Script", cursive;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 7vw;
+  color: #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.6);
+}
+
+.repository_container {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.repository_title {
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 1.5vw;
+  color: #3d0000;
+}
+
+.repository {
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 1.5vw;
+  color: #950101;
+}
+
+.header_line {
+  display: flex;
+  flex-direction: column;
+  margin: 40px;
+  justify-content: center;
+  align-items: center;
+}
+
+.header_line_color_1 {
+  background-color: #950101;
+  height: 3px;
+  width: 80%;
+  animation-name: header_line_color_1;
+  animation-duration: 1s;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+@keyframes header_line_color_1 {
+  0% {
+    transform: translateX(0) translateY(0) translateZ(0) perspective(0) scaleX(0.99) scaleY(1) scaleZ(1) skewX(0deg) skewY(0deg) rotate(0deg);
+    width: 1;
+    height: 1;
+  }
+  25% {
+    transform: translateX(0) translateY(0) translateZ(0) perspective(0) scaleX(1) scaleY(1) scaleZ(1) skewX(0deg) skewY(0deg) rotate(0deg);
+    width: 1;
+    height: 1;
+  }
+  50% {
+    transform: translateX(0) translateY(0) translateZ(0) perspective(0) scaleX(1.01) scaleY(1) scaleZ(1) skewX(0deg) skewY(0deg) rotate(0deg);
+    width: 1;
+    height: 1;
+  }
+  75% {
+    transform: translateX(0) translateY(0) translateZ(0) perspective(0) scaleX(1) scaleY(1) scaleZ(1) skewX(0deg) skewY(0deg) rotate(0deg);
+    width: 1;
+    height: 1;
+  }
+  100% {
+    transform: translateX(0) translateY(0) translateZ(0) perspective(0) scaleX(0.99) scaleY(1) scaleZ(1) skewY(0deg) skewX(0deg) rotate(0deg);
+    width: 1;
+    height: 1;
+  }
+}
+
+.header_line_color_2 {
+  background-color: #ff0000;
+  height: 3px;
+  width: 70%;
+  animation-name: header_line_color_2;
+  animation-duration: 1s;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+@keyframes header_line_color_2 {
+  0% {
+    transform: translateX(0) translateY(0) translateZ(0) perspective(0) scaleX(1.01) scaleY(1) scaleZ(1) skewX(0deg) skewY(0deg) rotate(0deg);
+    width: 1;
+    height: 1;
+  }
+  25% {
+    transform: translateX(0) translateY(0) translateZ(0) perspective(0) scaleX(1) scaleY(1) scaleZ(1) skewX(0deg) skewY(0deg) rotate(0deg);
+    width: 1;
+    height: 1;
+  }
+  50% {
+    transform: translateX(0) translateY(0) translateZ(0) perspective(0) scaleX(0.99) scaleY(1) scaleZ(1) skewX(0deg) skewY(0deg) rotate(0deg);
+    width: 1;
+    height: 1;
+  }
+  75% {
+    transform: translateX(0) translateY(0) translateZ(0) perspective(0) scaleX(1) scaleY(1) scaleZ(1) skewX(0deg) skewY(0deg) rotate(0deg);
+    width: 1;
+    height: 1;
+  }
+  100% {
+    transform: translateX(0) translateY(0) translateZ(0) perspective(0) scaleX(1.01) scaleY(1) scaleZ(1) skewY(0deg) skewX(0deg) rotate(0deg);
+    width: 1;
+    height: 1;
+  }
+}
+
+.header_line_color_3 {
+  background-color: #ff004d;
+  height: 3px;
+  width: 60%;
+  animation-name: header_line_color_3;
+  animation-duration: 1s;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+@keyframes header_line_color_3 {
+  0% {
+    transform: translateX(0) translateY(0) translateZ(0) perspective(0) scaleX(0.99) scaleY(1) scaleZ(1) skewX(0deg) skewY(0deg) rotate(0deg);
+    width: 1;
+    height: 1;
+  }
+  25% {
+    transform: translateX(0) translateY(0) translateZ(0) perspective(0) scaleX(1) scaleY(1) scaleZ(1) skewX(0deg) skewY(0deg) rotate(0deg);
+    width: 1;
+    height: 1;
+  }
+  50% {
+    transform: translateX(0) translateY(0) translateZ(0) perspective(0) scaleX(1.01) scaleY(1) scaleZ(1) skewX(0deg) skewY(0deg) rotate(0deg);
+    width: 1;
+    height: 1;
+  }
+  75% {
+    transform: translateX(0) translateY(0) translateZ(0) perspective(0) scaleX(1) scaleY(1) scaleZ(1) skewX(0deg) skewY(0deg) rotate(0deg);
+    width: 1;
+    height: 1;
+  }
+  100% {
+    transform: translateX(0) translateY(0) translateZ(0) perspective(0) scaleX(0.99) scaleY(1) scaleZ(1) skewY(0deg) skewX(0deg) rotate(0deg);
+    width: 1;
+    height: 1;
+  }
+}
+
+.header_line_color_4 {
+  background-color: #faef5d;
+  height: 3px;
+  width: 50%;
+  animation-name: header_line_color_4;
+  animation-duration: 1s;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+@keyframes header_line_color_4 {
+  0% {
+    transform: translateX(0) translateY(0) translateZ(0) perspective(0) scaleX(1.01) scaleY(1) scaleZ(1) skewX(0deg) skewY(0deg) rotate(0deg);
+    width: 1;
+    height: 1;
+  }
+  25% {
+    transform: translateX(0) translateY(0) translateZ(0) perspective(0) scaleX(1) scaleY(1) scaleZ(1) skewX(0deg) skewY(0deg) rotate(0deg);
+    width: 1;
+    height: 1;
+  }
+  50% {
+    transform: translateX(0) translateY(0) translateZ(0) perspective(0) scaleX(0.99) scaleY(1) scaleZ(1) skewX(0deg) skewY(0deg) rotate(0deg);
+    width: 1;
+    height: 1;
+  }
+  75% {
+    transform: translateX(0) translateY(0) translateZ(0) perspective(0) scaleX(1) scaleY(1) scaleZ(1) skewX(0deg) skewY(0deg) rotate(0deg);
+    width: 1;
+    height: 1;
+  }
+  100% {
+    transform: translateX(0) translateY(0) translateZ(0) perspective(0) scaleX(1.01) scaleY(1) scaleZ(1) skewY(0deg) skewX(0deg) rotate(0deg);
+    width: 1;
+    height: 1;
+  }
+}
+
+.header_line_color_5 {
+  background-color: #000000;
+  height: 3px;
+  width: 40%;
+  animation-name: header_line_color_5;
+  animation-duration: 1s;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+@keyframes header_line_color_5 {
+  0% {
+    transform: translateX(0) translateY(0) translateZ(0) perspective(0) scaleX(0.99) scaleY(1) scaleZ(1) skewX(0deg) skewY(0deg) rotate(0deg);
+    width: 1;
+    height: 1;
+  }
+  25% {
+    transform: translateX(0) translateY(0) translateZ(0) perspective(0) scaleX(1) scaleY(1) scaleZ(1) skewX(0deg) skewY(0deg) rotate(0deg);
+    width: 1;
+    height: 1;
+  }
+  50% {
+    transform: translateX(0) translateY(0) translateZ(0) perspective(0) scaleX(1.01) scaleY(1) scaleZ(1) skewX(0deg) skewY(0deg) rotate(0deg);
+    width: 1;
+    height: 1;
+  }
+  75% {
+    transform: translateX(0) translateY(0) translateZ(0) perspective(0) scaleX(1) scaleY(1) scaleZ(1) skewX(0deg) skewY(0deg) rotate(0deg);
+    width: 1;
+    height: 1;
+  }
+  100% {
+    transform: translateX(0) translateY(0) translateZ(0) perspective(0) scaleX(0.99) scaleY(1) scaleZ(1) skewY(0deg) skewX(0deg) rotate(0deg);
+    width: 1;
+    height: 1;
+  }
+}
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-family: "Dancing Script", cursive;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 2vw;
+  color: #950101;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+.footer:before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 30%;
+  background: #ff004d;
+  right: 50%;
+  bottom: 0px;
+  z-index: -1;
+  transition-property: all;
+  transition-delay: 0s;
+  transition-duration: 0.5s;
+  transition-timing-function: linear;
+  animation-name: footer;
+  animation-duration: 25s;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+@keyframes footer {
+  0% {
+    transform: translateX(0px) translateY(0) translateZ(0) perspective(0) scaleX(1) scaleY(0deg) scaleZ(1) skewX(0deg) skewY(0deg) rotate(0deg);
+    width: 1;
+    height: 1;
+  }
+  25% {
+    transform: translateX(-100px) translateY(0) translateZ(0) perspective(0) scaleX(1) scaleY(180deg) scaleZ(1) skewX(0deg) skewY(0deg) rotate(0deg);
+    width: 1;
+    height: 1;
+  }
+  50% {
+    transform: translateX(0px) translateY(0) translateZ(0) perspective(0) scaleX(1) scaleY(360deg) scaleZ(1) skewX(0deg) skewY(0deg) rotate(0deg);
+    width: 1;
+    height: 1;
+  }
+  75% {
+    transform: translateX(100px) translateY(0) translateZ(0) perspective(0) scaleX(1) scaleY(180deg) scaleZ(1) skewX(0deg) skewY(0deg) rotate(0deg);
+    width: 1;
+    height: 1;
+  }
+  100% {
+    transform: translateX(0px) translateY(0) translateZ(0) perspective(0) scaleX(1) scaleY(0deg) scaleZ(1) skewY(0deg) skewX(0deg) rotate(0deg);
+    width: 1;
+    height: 1;
+  }
+}
+.footer:hover {
+  color: #f6f7d7;
+}
+
+.footer_link {
+  margin-bottom: 10px;
+  color: #950101;
+  text-decoration: none;
+}
+
+/*
+todo header footer
+*//*# sourceMappingURL=Main.css.map */

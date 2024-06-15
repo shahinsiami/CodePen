@@ -1,23 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+import GitHeader from "./component/shahin_codepen/js/GitHeader.js";
+import GitFooter from "./component/shahin_codepen/js/GitFooter.js";
+import Accordion from "./component/element/accordion/Accordion.js";
+// import ShowPassword from "./component/element/show_password/ShowPassword.js";
+import "./component/master_css/Main.scss";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <GitHeader />
+      {/* <ShowPassword /> */}
+      <Accordion />
+      <GitFooter />
     </div>
   );
 }

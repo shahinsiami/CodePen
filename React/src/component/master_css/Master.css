@@ -1,0 +1,75 @@
+/*
+todo  font-family: "Dancing Script", cursive;
+todo  font-optical-sizing: auto;
+todo  font-weight: <weight>;
+todo  font-style: normal;
+todo
+todo  font-family: "Oswald", sans-serif;
+todo  font-optical-sizing: auto;
+todo  font-weight: <weight>;
+todo  font-style: normal;
+todo
+todo  <link rel="stylesheet" href="main.css">
+todo 	<link rel="preconnect" href="https://fonts.googleapis.com">
+todo 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+todo 	<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+todo 	<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+
+*/
+/*
+todo @include media(sm){
+todo   .hello{
+todo     background-color: lightblue;
+todo   }
+todo   
+todo }
+*/
+/*
+todo .smaple_one{
+todo   @include grid(3,3)
+todo }
+todo .smaple_two{
+todo   @include grid(3,3,10px,start,start,start,start,start,start)
+todo }
+*/
+/*
+todo  .sample_one{
+todo  @include column(1,2)
+todo  }
+todo  .sample_two{
+todo  @include row(1,2)
+todo   }
+*/
+/*
+todo .sample{
+todo   @include transition(all,1,5,linear)
+todo }
+*/
+/*
+todo .sample_one {
+todo   @include animation(
+todo     sample_two, //animation-name
+todo     3s, //animation-duration
+todo     2s, //nimation-delay
+todo     infinite, //animation-iteration-count
+todo     alternate, //animation-direction:
+todo     linear, //nimation-timing-function
+todo     forwards, //nimation-fill-mode
+todo     (0px, 10px, 50px, 10px, 10px),//translateX
+todo     (0px, 10px, 50px, 10px, 10px),//translateY
+todo     (0px, 10px, 50px, 10px, 10px, 10px),//translateZ
+todo     (1deg, 5deg, 1deg, 5deg, 1deg),//rotate
+todo     (0.1, 0.5, 0.2, 0.5, 0.3),//scaleX
+todo     (0.1, 0.5, 0.2, 0.5, 0.3),//scaleY
+todo     (0.1, 0.5, 0.2, 0.5, 0.3),//scaleZ
+todo     (1deg, 5deg, 1deg, 5deg, 1deg),//skewX
+todo     (1deg, 5deg, 1deg, 5deg, 1deg), //skewY
+todo     (0%,25%,50%,75%,100%), //width
+todo     (0%,25%,50%,75%,100%) //height
+todo 
+todo   );
+todo }
+*/
+/*
+todo @include box_sizing
+*//*# sourceMappingURL=Master.css.map */

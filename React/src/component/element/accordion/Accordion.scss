@@ -1,0 +1,128 @@
+@import "./../../master_css/Master.scss";
+.container{
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    // @include grid(repeat(4, 1fr),repeat(2, 1fr))
+  }
+  .accordion_container{
+    width: 100%;
+    height: 100%;
+    // background-color: green;
+    @include grid(50px 1fr,repeat(2))
+
+  }
+  .accordian_icon_holder{
+    background-color: $color_six_1;
+    @include column(1,2);
+    @include row(1,2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+
+   .accordian_icon_holder_up{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    @include animation(
+        accordian_icon_holder_up, //animation-name
+        0.5s, //animation-duration
+        0s, //nimation-delay
+        1, //animation-iteration-count
+        alternate, //animation-direction:
+        linear, //nimation-timing-function
+        forwards, //nimation-fill-mode
+        (0px, 0px, 0px,0px,0px),//translateX
+        (0px, 0px, 0px,0px,0px),//translateY
+        (0px, 0px, 0px,0px,0px,0px),//translateZ
+        (0deg, 45deg, 90deg, 135deg, 180deg),//rotate
+        (1, 1, 1, 1, 1),//scaleX
+        (1, 1, 1, 1, 1),//scaleY
+        (1, 1, 1, 1, 1),//scaleZ
+        (0deg, 0deg, 0deg, 0deg, 0deg),//skewX
+        (0deg, 0deg, 0deg, 0deg, 0deg), //skewY
+        (100%,100%,100%,100%,100%), //width
+        (100%,100%,100%,100%,100%) //height
+    
+      );
+   }
+   .accordian_icon_holder_down{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include animation(
+        accordian_icon_holder_down, //animation-name
+        0.5s, //animation-duration
+        0s, //nimation-delay
+        1, //animation-iteration-count
+        alternate, //animation-direction:
+        linear, //nimation-timing-function
+        forwards, //nimation-fill-mode
+        (0px, 0px, 0px,0px,0px),//translateX
+        (0px, 0px, 0px,0px,0px),//translateY
+        (0px, 0px, 0px,0px,0px,0px),//translateZ
+        (180deg, 135deg, 90deg, 45deg, 0deg),//rotate
+        (1, 1, 1, 1, 1),//scaleX
+        (1, 1, 1, 1, 1),//scaleY
+        (1, 1, 1, 1, 1),//scaleZ
+        (0deg, 0deg, 0deg, 0deg, 0deg),//skewX
+        (0deg, 0deg, 0deg, 0deg, 0deg), //skewY
+        (100%,100%,100%,100%,100%), //width
+        (100%,100%,100%,100%,100%) //height
+    
+      );
+      
+   }
+
+    svg{
+        pointer-events: none;
+        color: white;
+        width: 30px;
+        height: 30px;
+    }
+
+  }
+  .accordian_icon{
+    color: white;
+    display: none;
+  }
+  .accordian_titile_holder{
+    color:$color_six_1;
+    background-color: $color_six_3;
+    @include column(2,3);
+    @include row(1,2);
+  }
+  .accordian_titile{
+    height: 100%;
+    width: 100%;
+    color:$color_six_1;
+    background-color: $color_six_4;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+  .accordian_text_holder{
+    @include column(1,3);
+    @include row(2,3);
+    width: 100%;
+    overflow: hidden;
+    @include transition(all,0s,0.3s,linear)
+   
+  }
+  .accordian_text{
+    background-color: $color_six_2 ;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+    @include transition(all,0s,0.3s,linear) 
+  }
+  

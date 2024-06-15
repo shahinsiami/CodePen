@@ -1,0 +1,346 @@
+$color_one_1: #e3fdfd;
+$color_one_2: #cbf1f5;
+$color_one_3: #a6e3e9;
+$color_one_4: #71c9ce;
+$color_two_1: #fff5e4;
+$color_two_2: #ffe3e1;
+$color_two_3: #ffd1d1;
+$color_two_4: #ff9494;
+$color_three_1: #ffcfdf;
+$color_three_2: #fefdca;
+$color_three_3: #e0f9b5;
+$color_three_4: #a5dee5;
+$color_four_1: #3ec1d3;
+$color_four_2: #f6f7d7;
+$color_four_3: #ff9a00;
+$color_four_4: #ff165d;
+$color_five_1: #000000;
+$color_five_2: #3d0000;
+$color_five_3: #950101;
+$color_five_4: #ff0000;
+$color_five_5: #ff004d;
+$color_five_6: #faef5d;
+$color_six_1: #15133c;
+$color_six_2: #f72798;
+$color_six_3: #15f5ba;
+$color_six_4: #f1eee9;
+$color_six_5: #f0f3ff;
+// !   ---------------------------------------------------------------------------
+/*
+todo  font-family: "Dancing Script", cursive;
+todo  font-optical-sizing: auto;
+todo  font-weight: <weight>;
+todo  font-style: normal;
+todo
+todo  font-family: "Oswald", sans-serif;
+todo  font-optical-sizing: auto;
+todo  font-weight: <weight>;
+todo  font-style: normal;
+todo
+todo  <link rel="stylesheet" href="main.css">
+todo 	<link rel="preconnect" href="https://fonts.googleapis.com">
+todo 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+todo 	<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+todo 	<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+
+*/
+// !   ---------------------------------------------------------------------------
+@mixin media($breakpoint) {
+  @if $breakpoint == "xs" {
+    @media only screen and (max-width: 576px) {
+      @content;
+    }
+  } @else if $breakpoint == "sm" {
+    @media only screen and (min-width: 576px) and (max-width: 768px) {
+      @content;
+    }
+  } @else if $breakpoint == "md" {
+    @media only screen and (min-width: 768px) and (max-width: 992px) {
+      @content;
+    }
+  } @else if $breakpoint == "lg" {
+    @media only screen and (min-width: 992px) and (max-width: 1200px) {
+      @content;
+    }
+  } @else if $breakpoint == "xl" {
+    @media only screen and (min-width: 1200px) {
+      @content;
+    }
+  } @else if $breakpoint == "oxs" {
+    @media only screen and (min-width: 0px) {
+      @content;
+    }
+  } @else if $breakpoint == "osm" {
+    @media only screen and (min-width: 576px) {
+      @content;
+    }
+  } @else if $breakpoint == "omd" {
+    @media only screen and (min-width: 786px) {
+      @content;
+    }
+  } @else if $breakpoint == "olg" {
+    @media only screen and (min-width: 992px) {
+      @content;
+    }
+  }
+}
+
+// !   ---------------------------------------------------------------------------
+/*
+todo @include media(sm){
+todo   .hello{
+todo     background-color: lightblue;
+todo   }
+todo   
+todo }
+*/
+// !   ---------------------------------------------------------------------------
+@mixin grid(
+  $column,
+  $row,
+  $gap: 0px,
+  $justify-content: stretch,
+  $justify-items: stretch,
+  $justify-self: stretch,
+  $align-content: stretch,
+  $align-items: stretch,
+  $align-self: stretch
+) {
+  display: grid;
+  grid-gap: $gap;
+  justify-content: $justify-content;
+  justify-items: $justify-items;
+  justify-self: $justify-self;
+  align-content: $align-content;
+  align-items: $align-items;
+  align-self: $align-self;
+  @if $column != null {
+    grid-template-columns: $column;
+  }
+  @if $row != null {
+    grid-template-rows: $row;
+  }
+}
+// !   ---------------------------------------------------------------------------
+/*
+todo .smaple_one{
+todo   @include grid(3,3)
+todo }
+todo .smaple_two{
+todo   @include grid(3,3,10px,start,start,start,start,start,start)
+todo }
+*/
+// !   ---------------------------------------------------------------------------
+@mixin column($start, $end) {
+  grid-column: #{$start} / #{$end};
+}
+@mixin row($start, $end) {
+  grid-row: #{$start} / #{$end};
+}
+// !   ---------------------------------------------------------------------------
+/*
+todo  .sample_one{
+todo  @include column(1,2)
+todo  }
+todo  .sample_two{
+todo  @include row(1,2)
+todo   }
+*/
+// !   ---------------------------------------------------------------------------
+
+@mixin transition(
+  $transition-property,
+  $transition-delay,
+  $transition-duration,
+  $transition-timing-function
+) {
+  @if $transition-property != null {
+    transition-property: $transition-property;
+  }
+  @if $transition-delay != null {
+    transition-delay: $transition-delay;
+  }
+  @if $transition-duration != null {
+    transition-duration: $transition-duration;
+  }
+  @if $transition-delay != null {
+    transition-timing-function: $transition-timing-function;
+  }
+}
+// !   ---------------------------------------------------------------------------
+/*
+todo .sample{
+todo   @include transition(all,1,5,linear)
+todo }
+*/
+// !   ---------------------------------------------------------------------------
+
+@mixin animation(
+  $animation-name,
+  $animation-duration: 5s,
+  $animation-delay: 1s,
+  $animation-iteration-count: infinite,
+  $animation-direction: alternate,
+  $animation-timing-function: linear,
+  $animation-fill-mode: forwards,
+  $translateX,
+  $translateY,
+  $translateZ,
+  $rotate,
+  $scaleX,
+  $scaleY,
+  $scaleZ,
+  $skewX,
+  $skewY,
+  $width,
+  $height
+) {
+  animation-name: $animation-name;
+  animation-duration: $animation-duration;
+  animation-delay: $animation-delay;
+  animation-iteration-count: $animation-iteration-count;
+  animation-direction: $animation-direction;
+  animation-timing-function: $animation-timing-function;
+  animation-fill-mode: $animation-fill-mode;
+
+  @include keyframe(
+    $animation-name,
+    $translateX,
+    $translateY,
+    $translateZ,
+    $rotate,
+    $scaleX,
+    $scaleY,
+    $scaleZ,
+    $skewX,
+    $skewY,
+    $width,
+    $height,
+  );
+}
+
+@mixin keyframe(
+  $animation-name,
+  $translateX,
+  $translateY,
+  $translateZ,
+  $rotate,
+  $scaleX,
+  $scaleY,
+  $scaleZ,
+  $skewX,
+  $skewY,
+  $width,
+  $height,
+) {
+  @keyframes #{$animation-name} {
+    0% {
+      transform: translateX(if($translateX != null, nth($translateX, 1), 0))
+        translateY(if($translateY != null, nth($translateY, 1), 0))
+        translateZ(if($translateZ != null, nth($translateZ, 1), 0))
+        perspective(if($translateZ != null, nth($translateZ, 6), 0))
+        scaleX(if($scaleX != null, nth($scaleX, 1), 1))
+        scaleY(if($scaleY != null, nth($scaleY, 1), 1))
+        scaleZ(if($scaleZ != null, nth($scaleZ, 1), 1))
+        skewX(if($skewX != null, nth($skewX, 1), 0deg))
+        skewY(if($skewY != null, nth($skewY, 1), 0deg))
+        rotate(if($rotate != null, nth($rotate, 1), 0deg));
+        width:(if($width != null, nth($width, 1), 1));
+        height:(if($height != null, nth($height, 1), 1));
+    }
+    25% {
+      transform: translateX(if($translateX != null, nth($translateX, 2), 0))
+        translateY(if($translateY != null, nth($translateY, 2), 0))
+        translateZ(if($translateZ != null, nth($translateZ, 2), 0))
+        perspective(if($translateZ != null, nth($translateZ, 6), 0))
+        scaleX(if($scaleX != null, nth($scaleX, 2), 1))
+        scaleY(if($scaleY != null, nth($scaleY, 2), 1))
+        scaleZ(if($scaleZ != null, nth($scaleZ, 2), 1))
+        skewX(if($skewX != null, nth($skewX, 2), 0deg))
+        skewY(if($skewY != null, nth($skewY, 2), 0deg))
+        rotate(if($rotate != null, nth($rotate, 2), 0deg));
+        width:(if($width != null, nth($width, 2), 1));
+        height:(if($height != null, nth($height, 2), 1));
+    }
+    50% {
+      transform: translateX(if($translateX != null, nth($translateX, 3), 0))
+        translateY(if($translateY != null, nth($translateY, 3), 0))
+        translateZ(if($translateZ != null, nth($translateZ, 3), 0))
+        perspective(if($translateZ != null, nth($translateZ, 6), 0))
+        scaleX(if($scaleX != null, nth($scaleX, 3), 1))
+        scaleY(if($scaleY != null, nth($scaleY, 3), 1))
+        scaleZ(if($scaleZ != null, nth($scaleZ, 3), 1))
+        skewX(if($skewX != null, nth($skewX, 3), 0deg))
+        skewY(if($skewY != null, nth($skewY, 3), 0deg))
+        rotate(if($rotate != null, nth($rotate, 3), 0deg));
+        width:(if($width != null, nth($width, 3), 1));
+        height:(if($height != null, nth($height, 3), 1));
+    }
+    75% {
+      transform: translateX(if($translateX != null, nth($translateX, 4), 0))
+        translateY(if($translateY != null, nth($translateY, 4), 0))
+        translateZ(if($translateZ != null, nth($translateZ, 4), 0))
+        perspective(if($translateZ != null, nth($translateZ, 6), 0))
+        scaleX(if($scaleX != null, nth($scaleX, 4), 1))
+        scaleY(if($scaleY != null, nth($scaleY, 4), 1))
+        scaleZ(if($scaleZ != null, nth($scaleZ, 4), 1))
+        skewX(if($skewX != null, nth($skewX, 4), 0deg))
+        skewY(if($skewY != null, nth($skewY, 4), 0deg))
+        rotate(if($rotate != null, nth($rotate, 4), 0deg));
+        width:(if($width != null, nth($width, 4), 1));
+        height:(if($height != null, nth($height, 4), 1));
+    }
+    100% {
+      transform: translateX(if($translateX != null, nth($translateX, 5), 0))
+        translateY(if($translateY != null, nth($translateY, 5), 0))
+        translateZ(if($translateZ != null, nth($translateZ, 5), 0))
+        perspective(if($translateZ != null, nth($translateZ, 6), 0))
+        scaleX(if($scaleX != null, nth($scaleX, 5), 1))
+        scaleY(if($scaleY != null, nth($scaleY, 5), 1))
+        scaleZ(if($scaleZ != null, nth($scaleZ, 5), 1))
+        skewY(if($skewY != null, nth($skewY, 5), 0deg))
+        skewX(if($skewX != null, nth($skewX, 5), 0deg))
+        rotate(if($rotate != null, nth($rotate, 5), 0deg));
+        width:(if($width != null, nth($width, 5), 1));
+        height:(if($height != null, nth($height, 5), 1));
+    }
+  }
+}
+
+// !   ---------------------------------------------------------------------------
+/*
+todo .sample_one {
+todo   @include animation(
+todo     sample_two, //animation-name
+todo     3s, //animation-duration
+todo     2s, //nimation-delay
+todo     infinite, //animation-iteration-count
+todo     alternate, //animation-direction:
+todo     linear, //nimation-timing-function
+todo     forwards, //nimation-fill-mode
+todo     (0px, 10px, 50px, 10px, 10px),//translateX
+todo     (0px, 10px, 50px, 10px, 10px),//translateY
+todo     (0px, 10px, 50px, 10px, 10px, 10px),//translateZ
+todo     (1deg, 5deg, 1deg, 5deg, 1deg),//rotate
+todo     (0.1, 0.5, 0.2, 0.5, 0.3),//scaleX
+todo     (0.1, 0.5, 0.2, 0.5, 0.3),//scaleY
+todo     (0.1, 0.5, 0.2, 0.5, 0.3),//scaleZ
+todo     (1deg, 5deg, 1deg, 5deg, 1deg),//skewX
+todo     (1deg, 5deg, 1deg, 5deg, 1deg), //skewY
+todo     (0%,25%,50%,75%,100%), //width
+todo     (0%,25%,50%,75%,100%) //height
+todo 
+todo   );
+todo }
+*/
+// !   ---------------------------------------------------------------------------
+@mixin box_sizing {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+// !   ---------------------------------------------------------------------------
+/*
+todo @include box_sizing
+*/
+// !   ---------------------------------------------------------------------------
