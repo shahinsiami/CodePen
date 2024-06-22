@@ -1,0 +1,149 @@
+@import "./../../../master_css/Master.scss";
+
+.container{
+  @include media(ol){
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: $color_six_2;
+  margin: auto;
+
+    .logo{
+      img{
+        width: 75px;
+      }
+     
+  } 
+  .toggle{
+    display: none;
+  }
+  .social{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    li{
+      margin: 10px;
+      list-style-type: none;
+    }
+    a{
+      font-size: 20px;
+      color:$color_six_3;
+  }
+  }
+  .links{
+    height: 100% !important;
+    @include transition(all,0s,0.5s,linear);
+    .list{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      li{
+        font-family: "Dancing Script", cursive;
+        list-style-type: none;
+        margin: 0 10px;
+       a {
+          color: $color_six_1;
+          font-size: 20px;
+          text-decoration:none;
+          &:hover {
+            color:$color_six_3;
+        }
+        }
+      }
+     }
+    }
+}
+
+
+
+  @include media(so){
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    background-color: $color_six_2;
+    img{
+      width: 75px;
+    }
+    .social{
+      display: none;
+    }
+    .toggle{
+      display: block ;
+      background: transparent;
+      border: 0;
+      width: 50px;
+      height: 50px;
+      font-size: 30px;
+      cursor: pointer;
+    }
+
+    .links{
+      @include transition(all,0s,0.5s,linear);
+      display: flex;
+      justify-content: left;
+      align-items: start;
+      flex-direction: column;
+      z-index: 10;
+      position: absolute;
+      right: 0;
+      left: 0;
+      top: 100%;
+      background-color: $color_six_3;
+      overflow: hidden;
+      padding:0px;
+      margin: 0px;
+      .list{
+        width: 100%;
+        padding:0px;
+        margin: 0px;
+        :hover{
+          background-color: $color_five_5;
+        }
+      li{
+        width: 100%;
+        font-family: "Dancing Script", cursive;
+        list-style-type: none;
+        margin:0px;
+        padding: 10px;
+        text-align: left;
+        border-bottom: 1px solid $color_five_1;
+       a {
+          color: $color_six_1;
+          font-size: 20px;
+          text-decoration:none;
+          text-justify: left;
+          &:hover {
+            color:$color_six_4;
+        }
+        }
+      }
+      }
+    }
+
+
+     }
+
+
+
+
+
+
+
+
+
+   
+}
+
+
+
+
+
+
+
+
+
+
+

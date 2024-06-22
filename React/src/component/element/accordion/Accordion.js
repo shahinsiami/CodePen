@@ -1,13 +1,13 @@
 import "./Accordion.scss";
 import React,{useState} from "react";
-import dataQuery from "../../data/dataQuery.js"
+import data from "../../data/dataQuery.js"
 import AccordionItem from "./AccordionItem.js"
 
 
 
 const Accordion = () => {
 
-  const [dataSample] = useState(dataQuery); 
+  const [dataSample] = useState(data.dataQuery); 
   return(
 	<div className="container">
 		 {
