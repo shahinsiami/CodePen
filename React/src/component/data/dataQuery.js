@@ -4,17 +4,23 @@ const dataQuery = [
     {
          id: 1,
          title: "Title One",
-         info: "Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups."
+         position: "Position One",
+         info: "Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.",
+         image: "https://res.cloudinary.com/dlacoctwh/image/upload/v1706994797/jpg2000/1_gemgn6.jpg",
     },
     {
          id: 2,
          title: "Title Tow",
-         info: "Lorem ipsum is placeholder text commonly used in the graphic, print."
+         position: "Position Tow",
+         info: "Lorem ipsum is placeholder text commonly used in the graphic, print.",
+         image: "https://res.cloudinary.com/dlacoctwh/image/upload/v1706994807/jpg2000/2_dd8jmw.jpg",
     },
     {
          id: 3,
          title: "Title Three",
-         info: "Lorem ipsum is placeholder text commonly used in the graphic."
+         position: "Position Three",
+         info: "Lorem ipsum is placeholder text commonly used in the graphic.",
+         image:"https://res.cloudinary.com/dlacoctwh/image/upload/v1706994807/jpg2000/3_k8utvd.jpg",
     },
 ]
 const social = [

@@ -1,4 +1,4 @@
-@import "./../../../master_css/Master.scss";
+@import "./../../../MasterCss/Master.scss";
 
 .container{
   @include media(ol){
@@ -8,6 +8,7 @@
   justify-content: space-between;
   background-color: $color_six_2;
   margin: auto;
+  flex-direction: row;
 
     .logo{
       img{
@@ -54,10 +55,8 @@
      }
     }
 }
-
-
-
   @include media(so){
+    flex-direction: row;
     width: 100%;
     display: flex;
     align-items: center;

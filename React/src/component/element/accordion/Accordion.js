@@ -1,6 +1,6 @@
 import "./Accordion.scss";
 import React,{useState} from "react";
-import data from "../../data/dataQuery.js"
+import data from "../../Data/DataQuery.js"
 import AccordionItem from "./AccordionItem.js"
 
 

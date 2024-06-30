@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import "./Navbar.scss";
 import { FaBars,  FaTimes } from 'react-icons/fa';
-import data from "../../../data/dataQuery.js"
+import data from "../../../Data/DataQuery.js"
 
 
 function NavbarOne() {
