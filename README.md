@@ -1,6 +1,8 @@
-# CodePen
- The codes available in the CodePen
+## 🏗️ Pre-designed Components  
+
+Some foundational components designed in **CodePen** have been committed to this repository.  
+They can be utilized for future display or further enhancements as needed.  
 
 
-Hello friends, this is a sample of elements that I put on CodePen and you can use them for front-end design. Many of these items are being edited and developed by other developers, but since it is freely available to the public, I have made some changes to make it compatible with my design framework and put it here.
-
+## 🌐 Contact  
+If you'd like to get in touch, visit my website: [Shahin.page](https://shahin.page)
